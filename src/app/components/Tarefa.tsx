@@ -26,6 +26,7 @@ export default function Tarefa({ tarefas, tarefa: novaTarefa, users, user: novoU
     const tarefasConcluido = tarefas.filter((tarefa) => tarefa.status === "concluido");
 
     
+    
     return (
         <div className="relative min-h-screen bg-gray-100">
             <div className="p-6">
@@ -48,13 +49,13 @@ export default function Tarefa({ tarefas, tarefa: novaTarefa, users, user: novoU
                                         >
                                             <FaTrash />
                                         </button>
-                                        <button
+                                        <div
                                             className="absolute top-2 right-10 text-blue-500 hover:text-blue-600"
                                             title="Editar"
                                             onClick={() => setTarefaParaEditar(tarefa)}
                                         >
                                              <SheetEdit tarefa={tarefa}/>
-                                        </button>
+                                        </div>
                                         <h3 className="font-semibold text-gray-800">{tarefa.titulo}</h3>
                                         <p className="text-sm text-gray-600">{tarefa.descricao}</p>
                                         <p className="text-xs font-medium mt-2 text-gray-500">
@@ -82,13 +83,13 @@ export default function Tarefa({ tarefas, tarefa: novaTarefa, users, user: novoU
                                     >
                                         <FaTrash />
                                     </button>
-                                    <button
+                                    <div
                                         className="absolute top-2 right-10 text-blue-500 hover:text-blue-600"
                                         title="Editar"
                                         onClick={() => setTarefaParaEditar(tarefa)}
                                     >
                                        <SheetEdit tarefa={tarefa}/>
-                                    </button>
+                                    </div>
                                     <h3 className="font-semibold text-gray-800">{tarefa.titulo}</h3>
                                     <p className="text-sm text-gray-600">{tarefa.descricao}</p>
                                     <p className="text-xs font-medium mt-2 text-gray-500">
@@ -115,13 +116,13 @@ export default function Tarefa({ tarefas, tarefa: novaTarefa, users, user: novoU
                                     >
                                         <FaTrash />
                                     </button>
-                                    <button
+                                    <div
                                         className="absolute top-2 right-10 text-blue-500 hover:text-blue-600"
                                         title="Editar"
                                         onClick={() => setTarefaParaEditar(tarefa)}
                                     >
                                         <SheetEdit tarefa={tarefa}/>
-                                    </button>
+                                    </div>
                                     <h3 className="font-semibold text-gray-800">{tarefa.titulo}</h3>
                                     <p className="text-sm text-gray-600">{tarefa.descricao}</p>
                                     <p className="text-xs font-medium mt-2 text-gray-500">
