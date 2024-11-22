@@ -19,8 +19,13 @@ CREATE TABLE tarefas (
     descricao TEXT NOT NULL,
     status VARCHAR(20) CHECK (status IN ('aFazer', 'processando', 'concluido')) DEFAULT 'aFazer',
     prioridade VARCHAR(10) CHECK (prioridade IN ('BAIXA', 'MEDIA', 'ALTA')) NOT NULL,
+    nomeSetor Varchar(100) NOT NULL,
     id_usuario INT NOT NULL,
     criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     atualizado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     CONSTRAINT fk_usuario FOREIGN KEY (id_usuario) REFERENCES usuarios(id) ON DELETE CASCADE
 );
+
+
+Voltar commit: 
+git reset --hard HEAD

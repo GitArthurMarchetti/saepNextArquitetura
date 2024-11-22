@@ -11,13 +11,15 @@ import {
 } from "@/components/ui/sheet"
 import TarefaType, { saveTarefa } from "../services/tarefa"
 import { useState } from "react";
+import { UsuarioType } from "../services/usuario";
 
 type Props = {
     tarefas: TarefaType[];
     tarefa: TarefaType;
+    users: UsuarioType[]
 };
 
-export default function SheetComponent({ tarefas, tarefa: novaTarefa }: Props) {
+export default function SheetComponent({ tarefas, tarefa: novaTarefa, users }: Props) {
     const [tarefa, setTarefa] = useState<TarefaType>(novaTarefa);
 
     return (
@@ -29,7 +31,7 @@ export default function SheetComponent({ tarefas, tarefa: novaTarefa }: Props) {
                 <SheetHeader>
                     <SheetTitle className="text-xl font-bold">Criar Tarefa</SheetTitle>
                     <SheetDescription className="text-gray-600">
-                        Crie sua tarefa e coloque tudo em dia!
+                        TODOS OS VALORES DEVEM SER PREENCHIDOS
                     </SheetDescription>
                 </SheetHeader>
 
@@ -108,17 +110,31 @@ export default function SheetComponent({ tarefas, tarefa: novaTarefa }: Props) {
                         </select>
                     </div>
 
+                    <div>
+                        <label htmlFor="nomeSetor" className="block text-sm font-medium text-gray-700">
+                            Nome do setor 
+                        </label>
+                        <input
+                            type="text"
+                            id="nomeSetor"
+                            name="nomeSetor"
+                            className="w-full p-2 border rounded-md text-black"
+                            placeholder="Nome do Setor"
+                            onChange={(e) => setTarefa({ ...tarefa, nomeSetor: e.target.value })}
+                        />
+                    </div>
+
                     {/* Input para Nome do Usuário */}
                     <div>
                         <label htmlFor="nome_usuario" className="block text-sm font-medium text-gray-700">
-                            Nome do Usuário
+                            Nome do Usuário 
                         </label>
                         <input
                             type="text"
                             id="nome_usuario"
                             name="nome_usuario"
                             className="w-full p-2 border rounded-md text-black"
-                            placeholder="Nome do Usuário"
+                            placeholder="Nome do Usuário (precisa estar logado)"
                         />
                     </div>
 

@@ -8,7 +8,10 @@ export default async function Home() {
   const tarefa = await getEmptyTarefa();
 
   const user = await getEmptyUsuario()
+
   const users = await getUsuarios()
+
+  console.log(tarefas)
 
   return <Tarefa tarefas={tarefas} tarefa={tarefa} user={user} users={users} />;
 }

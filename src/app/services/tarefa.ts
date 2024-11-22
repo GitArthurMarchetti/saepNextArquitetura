@@ -7,16 +7,18 @@ import { redirect } from 'next/navigation'
 
 
 
-export type TarefaType = {
+type TarefaType = {
     id: number | null;
     titulo: string;
     descricao: string;
     status: "aFazer" | "processando" | "concluido";
     prioridade: "BAIXA" | "MEDIA" | "ALTA";
-    id_usuario: number;
-    criado_em?: string; // Opcional, pois será gerado automaticamente pelo banco
-    atualizado_em?: string; // Opcional, pois será gerado automaticamente pelo banco
+    nomeSetor: string;
+    id_usuario: number | string | null; // Permite null
+    criado_em?: string;
+    atualizado_em?: string;
 };
+
 export default TarefaType
 
 
@@ -30,26 +32,52 @@ export async function getEmptyTarefa(): Promise<TarefaType> {
         descricao: "",
         status: "aFazer", // Status padrão
         prioridade: "MEDIA", // Prioridade padrão
+        nomeSetor: "",
         id_usuario: 0, // Valor padrão para inicialização
     };
 }
 
 
 export async function getTarefas(): Promise<TarefaType[]> {
-    return await db.execute(
+    const results = await db.execute(
         sql`
-            SELECT * 
-            FROM tarefas 
-            ORDER BY 
-                CASE prioridade 
-                    WHEN 'ALTA' THEN 1
-                    WHEN 'MEDIA' THEN 2
-                    WHEN 'BAIXA' THEN 3
-                END ASC,
-                id ASC
-        `
-    ) as TarefaType[];
+        SELECT 
+            id, 
+            titulo, 
+            descricao, 
+            status, 
+            prioridade, 
+            "nomesetor" AS "nomeSetor", -- Alias correto
+            id_usuario, 
+            criado_em, 
+            atualizado_em 
+        FROM tarefas
+        ORDER BY 
+            CASE prioridade 
+                WHEN 'ALTA' THEN 1
+                WHEN 'MEDIA' THEN 2
+                WHEN 'BAIXA' THEN 3
+            END ASC,
+            id ASC;
+    `
+    );
+
+    console.log("Resultados brutos do banco:", results);
+
+    return results.map((row: any) => ({
+        id: row.id,
+        titulo: row.titulo,
+        descricao: row.descricao,
+        status: row.status,
+        prioridade: row.prioridade,
+        nomeSetor: row.nomeSetor || "Sem setor definido", // Garantimos o nomeSetor aqui
+        id_usuario: row.id_usuario,
+        criado_em: row.criado_em,
+        atualizado_em: row.atualizado_em,
+    })) as TarefaType[];
 }
+
+
 
 
 export async function getTarefasByUsuario(id_usuario: number): Promise<TarefaType[]> {
@@ -62,6 +90,7 @@ export async function getTarefasByUsuario(id_usuario: number): Promise<TarefaTyp
         descricao: row.descricao,
         status: row.status,
         prioridade: row.prioridade,
+        nomeSetor: row.nomeSetor,
         id_usuario: row.id_usuario,
         criado_em: row.criado_em,
         atualizado_em: row.atualizado_em,
@@ -74,10 +103,13 @@ export async function saveTarefa(formData: FormData) {
     const descricao = formData.get('descricao') as string;
     const status = (formData.get('status') as string) || 'aFazer'; // Valor padrão
     const prioridade = formData.get('prioridade') as "BAIXA" | "MEDIA" | "ALTA";
+    const nomeSetor = formData.get('nomeSetor') as string;
     const nome_usuario = formData.get('nome_usuario') as string; // Nome do usuário enviado pelo formulário
 
+    console.log(nomeSetor)
+
     // Validação inicial
-    if (!titulo || !descricao || !prioridade || !nome_usuario) {
+    if (!titulo || !descricao || !prioridade || !nome_usuario || !nomeSetor) {
         throw new Error("Todos os campos obrigatórios, incluindo o nome do usuário, devem ser preenchidos.");
     }
 
@@ -98,6 +130,7 @@ export async function saveTarefa(formData: FormData) {
         id,
         titulo,
         descricao,
+        nomeSetor,
         status: status as "aFazer" | "processando" | "concluido",
         prioridade,
         id_usuario,
@@ -106,16 +139,17 @@ export async function saveTarefa(formData: FormData) {
     // Inserir ou atualizar a tarefa
     if (!id) {
         await db.execute(sql`
-            INSERT INTO tarefas (titulo, descricao, status, prioridade, id_usuario)
-            VALUES (${tarefa.titulo}, ${tarefa.descricao}, ${tarefa.status}, ${tarefa.prioridade}, ${tarefa.id_usuario})
+            INSERT INTO tarefas (titulo, descricao, status, prioridade, nomeSetor, id_usuario)
+            VALUES (${tarefa.titulo}, ${tarefa.descricao}, ${tarefa.status}, ${tarefa.prioridade}, ${nomeSetor}, ${tarefa.id_usuario})
         `);
     } else {
-        await db.execute(sql`
+        await db.execute(sql`l
             UPDATE tarefas
             SET titulo = ${tarefa.titulo},
                 descricao = ${tarefa.descricao},
                 status = ${tarefa.status},
                 prioridade = ${tarefa.prioridade},
+                nomeSetor = ${nomeSetor},
                 atualizado_em = CURRENT_TIMESTAMP
             WHERE id = ${tarefa.id}
         `);

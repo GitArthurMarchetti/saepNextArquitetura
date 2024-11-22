@@ -107,6 +107,23 @@ export default function SheetEdit({ tarefa: novaTarefa }: Props) {
                         </select>
                     </div>
 
+
+                    <div>
+                        <label htmlFor="nomeSetor" className="block text-sm font-medium text-gray-700">
+                            Nome do setor 
+                        </label>
+                        <input
+                            type="text"
+                            id="nomeSetor"
+                            name="nomeSetor"
+                            className="w-full p-2 border rounded-md text-black"
+                            placeholder="Nome do Setor"
+                            value={tarefa.nomeSetor}
+                            onChange={(e) => setTarefa({ ...tarefa, nomeSetor: e.target.value as string })}
+                        />
+                    </div>
+
+
                     {/* Input para Nome do Usuário */}
                     <div>
                         <label htmlFor="nome_usuario" className="block text-sm font-medium text-gray-700">
@@ -117,7 +134,7 @@ export default function SheetEdit({ tarefa: novaTarefa }: Props) {
                             id="nome_usuario"
                             name="nome_usuario"
                             className="w-full p-2 border rounded-md text-black"
-                            placeholder="Nome do Usuário"
+                            placeholder="Usuário (APENAS O CRIADOR PODE EDITAR)"
                         />
                     </div>
 
