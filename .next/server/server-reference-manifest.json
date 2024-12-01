@@ -1,0 +1,62 @@
+{
+  "node": {
+    "d524ce14d75fab89b783f08ec65ac427c763065e": {
+      "workers": {
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Csarah%5C%5CDesktop%5C%5Cprojetos%5C%5CsaepNextArquitetura%5C%5Ckanban%5C%5Csrc%5C%5Capp%5C%5Cservices%5C%5Ctarefa.ts%22%2C%5B%22removeTarefa%22%2C%22saveTarefa%22%2C%22getTarefas%22%2C%22getEmptyTarefa%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Csarah%5C%5CDesktop%5C%5Cprojetos%5C%5CsaepNextArquitetura%5C%5Ckanban%5C%5Csrc%5C%5Capp%5C%5Cservices%5C%5Cusuario.ts%22%2C%5B%22getEmptyUsuario%22%2C%22getUsuarios%22%2C%22saveUsuario%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/page": "rsc"
+      }
+    },
+    "f052c14cda352ad6e7a3e758f236377b6e9723fc": {
+      "workers": {
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Csarah%5C%5CDesktop%5C%5Cprojetos%5C%5CsaepNextArquitetura%5C%5Ckanban%5C%5Csrc%5C%5Capp%5C%5Cservices%5C%5Ctarefa.ts%22%2C%5B%22removeTarefa%22%2C%22saveTarefa%22%2C%22getTarefas%22%2C%22getEmptyTarefa%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Csarah%5C%5CDesktop%5C%5Cprojetos%5C%5CsaepNextArquitetura%5C%5Ckanban%5C%5Csrc%5C%5Capp%5C%5Cservices%5C%5Cusuario.ts%22%2C%5B%22getEmptyUsuario%22%2C%22getUsuarios%22%2C%22saveUsuario%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/page": "rsc"
+      }
+    },
+    "2c1a506542e75823f37c63b339ed5e994d616612": {
+      "workers": {
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Csarah%5C%5CDesktop%5C%5Cprojetos%5C%5CsaepNextArquitetura%5C%5Ckanban%5C%5Csrc%5C%5Capp%5C%5Cservices%5C%5Ctarefa.ts%22%2C%5B%22removeTarefa%22%2C%22saveTarefa%22%2C%22getTarefas%22%2C%22getEmptyTarefa%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Csarah%5C%5CDesktop%5C%5Cprojetos%5C%5CsaepNextArquitetura%5C%5Ckanban%5C%5Csrc%5C%5Capp%5C%5Cservices%5C%5Cusuario.ts%22%2C%5B%22getEmptyUsuario%22%2C%22getUsuarios%22%2C%22saveUsuario%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/page": "rsc"
+      }
+    },
+    "342ea09058e3ad859cd08d06c2c631e462eed465": {
+      "workers": {
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Csarah%5C%5CDesktop%5C%5Cprojetos%5C%5CsaepNextArquitetura%5C%5Ckanban%5C%5Csrc%5C%5Capp%5C%5Cservices%5C%5Ctarefa.ts%22%2C%5B%22removeTarefa%22%2C%22saveTarefa%22%2C%22getTarefas%22%2C%22getEmptyTarefa%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Csarah%5C%5CDesktop%5C%5Cprojetos%5C%5CsaepNextArquitetura%5C%5Ckanban%5C%5Csrc%5C%5Capp%5C%5Cservices%5C%5Cusuario.ts%22%2C%5B%22getEmptyUsuario%22%2C%22getUsuarios%22%2C%22saveUsuario%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/page": "rsc"
+      }
+    },
+    "287cb39ba7914f2524a6aa0a7814fc3575c1e3bb": {
+      "workers": {
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Csarah%5C%5CDesktop%5C%5Cprojetos%5C%5CsaepNextArquitetura%5C%5Ckanban%5C%5Csrc%5C%5Capp%5C%5Cservices%5C%5Ctarefa.ts%22%2C%5B%22removeTarefa%22%2C%22saveTarefa%22%2C%22getTarefas%22%2C%22getEmptyTarefa%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Csarah%5C%5CDesktop%5C%5Cprojetos%5C%5CsaepNextArquitetura%5C%5Ckanban%5C%5Csrc%5C%5Capp%5C%5Cservices%5C%5Cusuario.ts%22%2C%5B%22getEmptyUsuario%22%2C%22getUsuarios%22%2C%22saveUsuario%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/page": "rsc"
+      }
+    },
+    "7adafd4db14256b4676ce81c95fc192444db506f": {
+      "workers": {
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Csarah%5C%5CDesktop%5C%5Cprojetos%5C%5CsaepNextArquitetura%5C%5Ckanban%5C%5Csrc%5C%5Capp%5C%5Cservices%5C%5Ctarefa.ts%22%2C%5B%22removeTarefa%22%2C%22saveTarefa%22%2C%22getTarefas%22%2C%22getEmptyTarefa%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Csarah%5C%5CDesktop%5C%5Cprojetos%5C%5CsaepNextArquitetura%5C%5Ckanban%5C%5Csrc%5C%5Capp%5C%5Cservices%5C%5Cusuario.ts%22%2C%5B%22getEmptyUsuario%22%2C%22getUsuarios%22%2C%22saveUsuario%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/page": "rsc"
+      }
+    },
+    "7432913433fac79a230c4bba00dad8b35dc17411": {
+      "workers": {
+        "app/page": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22C%3A%5C%5CUsers%5C%5Csarah%5C%5CDesktop%5C%5Cprojetos%5C%5CsaepNextArquitetura%5C%5Ckanban%5C%5Csrc%5C%5Capp%5C%5Cservices%5C%5Ctarefa.ts%22%2C%5B%22removeTarefa%22%2C%22saveTarefa%22%2C%22getTarefas%22%2C%22getEmptyTarefa%22%5D%5D%2C%5B%22C%3A%5C%5CUsers%5C%5Csarah%5C%5CDesktop%5C%5Cprojetos%5C%5CsaepNextArquitetura%5C%5Ckanban%5C%5Csrc%5C%5Capp%5C%5Cservices%5C%5Cusuario.ts%22%2C%5B%22getEmptyUsuario%22%2C%22getUsuarios%22%2C%22saveUsuario%22%5D%5D%5D&__client_imported__=!"
+      },
+      "layer": {
+        "app/page": "rsc"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "VWvrZId3HcPhUFyJclhu81eADbUQlqaasJ8vcOJguPo="
+}
